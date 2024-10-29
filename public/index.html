@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria - Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Sistema de Gestión de Veterinaria</h1>
+
+    <!-- Sección de búsqueda de animales -->
+    <section id="busqueda-animal">
+        <h2>Buscar Animal</h2>
+        <input type="text" id="searchInput" placeholder="Buscar por nombre o ID">
+        <button onclick="buscarAnimal()">Buscar</button>
+    </section>
+
+    <!-- Sección para agregar un animal -->
+    <section id="agregar-animal">
+        <h2>Agregar Animal</h2>
+        <form id="formAnimal">
+            <input type="text" id="nombreAnimal" placeholder="Nombre" required>
+            <input type="text" id="especieAnimal" placeholder="Especie" required>
+            <input type="number" id="edadAnimal" placeholder="Edad" required>
+            <button type="button" onclick="agregarAnimal()">Agregar Animal</button>
+        </form>
+    </section>
+
+    <!-- Sección para agregar una vacuna -->
+    <section id="agregar-vacuna">
+        <h2>Agregar Vacuna</h2>
+        <form id="formVacuna">
+            <input type="text" id="nombreVacuna" placeholder="Nombre de la vacuna" required>
+            <input type="date" id="fechaVacuna" required>
+            <input type="number" id="animalIdVacuna" placeholder="ID del animal" required>
+            <button type="button" onclick="agregarVacuna()">Agregar Vacuna</button>
+        </form>
+    </section>
+
+    <!-- Sección para mostrar la lista de animales y sus vacunas -->
+    <section id="lista-animales">
+        <h2>Lista de Animales</h2>
+        <ul id="animalesList"></ul>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
